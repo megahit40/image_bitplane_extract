@@ -10,7 +10,6 @@ def get_planes(img_data,bit_pos):
 	for i in range(len(img_pixels)):
 		bit_plane_value = bin(img_pixels[i])[2:].zfill(8)[7-bit_pos]
 		out_pixels.append(255*int(bit_plane_value))	
-		out_pixels.append(0)
 	return out_pixels
 
 for channel in range(3):
