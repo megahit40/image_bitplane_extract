@@ -1,9 +1,8 @@
-##'''Stegsolve i python. v.1.0'''
 #!/usr/bin/env python3
 
 from PIL import Image
 
-img = Image.open("frimerke.png")
+img = Image.open("filename")
 
 def get_planes(img_data,bit_pos):
 	img_pixels = list(img_data)
