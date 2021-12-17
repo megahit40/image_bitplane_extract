@@ -18,5 +18,5 @@ for channel in range(3):
 		out_pixels = get_planes(img.getchannel(channel).getdata(),bit_pos)
 		out_img = Image.new("1", img.size)
 		out_img.putdata(out_pixels)
-		out_img.save(f"{channel}-{bit_pos}.png")
+		out_img.save(f"{'RGB'[channel]}-{bit_pos}.png")
 		#out_img.show()
