@@ -12,10 +12,13 @@ def get_planes(img_data,bit_pos):
 		out_pixels.append(255*int(bit_plane_value))	
 	return out_pixels
 
-for channel in range(3):
-	for bit_pos in range(8):
-		out_pixels = get_planes(img.getchannel(channel).getdata(),bit_pos)
-		out_img = Image.new("1", img.size)
-		out_img.putdata(out_pixels)
-		out_img.save(f"{'RGB'[channel]}-{bit_pos}.png")
-		#out_img.show()
+if __name__ == '__main__':
+
+	for channel in range(3):
+		for bit_pos in range(8):
+			out_pixels = get_planes(img.getchannel(channel).getdata(),bit_pos)
+			out_img = Image.new("1", img.size)
+			out_img.putdata(out_pixels)
+			out_img.save(f"{'RGB'[channel]}-{bit_pos}.png")
+			#out_img.show()
+		
