@@ -10,7 +10,7 @@ def get_planes(img_data,bit_pos):
 	for i in range(len(img_pixels)):
 		bit_plane_value = bin(img_pixels[i])[2:].zfill(8)[7-bit_pos]
 		## Returns either 0 or 1. 
-		## Append 0 or 255 (black and white):
+		## Append 0 or 255 (black or white):
 		out_pixels.append(255*int(bit_plane_value))	
 	return out_pixels
 
