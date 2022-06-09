@@ -2,7 +2,7 @@
 
 from PIL import Image
 
-img = Image.open("epv.png")
+img = Image.open("filename")
 
 def get_planes(img_data,bit_pos):
 	img_pixels = list(img_data)
@@ -14,6 +14,7 @@ def get_planes(img_data,bit_pos):
 		out_pixels.append(255*int(bit_plane_value))	
 	return out_pixels
 
+
 def main():
 	for channel in range(3):
 		for bit_pos in range(8):
@@ -24,6 +25,7 @@ def main():
 			out_img.save(f"{'RGB'[channel]}-{bit_pos}.png")
 			## uncomment if you want to open each picture as it's saved:
 			#out_img.show()
+
 
 if __name__ == '__main__':
     main()
